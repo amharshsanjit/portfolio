@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07070a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262638;
+  border-radius: 4px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* Futuristic Background Noise & Cyber Grid */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 20%, rgba(239, 68, 68, 0.12) 0%, rgba(10, 10, 15, 0.8) 50%, #030305 100%);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(14, 14, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 22, 34, 0.8);
+  border-color: rgba(239, 68, 68, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.25), 0 0 20px -5px rgba(239, 68, 68, 0.15);
+  transform: translateY(-3px);
+}
+
+.glass-card-crimson {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(14, 14, 22, 0.7) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Red Neon Glow Effects */
+.text-glow-red {
+  text-shadow: 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+}
+
+.box-glow-subtle {
+  box-shadow: 0 0 40px -10px rgba(239, 68, 68, 0.18);
+}
+
+/* Cyber Scanning Line Animation */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.cyber-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.8), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+/* Gradient Text Utilities */
+.gradient-text-red {
+  background: linear-gradient(135deg, #ffffff 20%, #fca5a5 60%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-crimson {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hardware / Terminal Accent */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background-color: #ef4444;
+  vertical-align: middle;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
